@@ -5,6 +5,8 @@ using UnityEngine;
 public class Stage : MonoBehaviour
 {
     //스테이지 시작지점
-    public GameObject startPos;
+    public Transform startPos;
+
+    public int stageNum;
 
 }

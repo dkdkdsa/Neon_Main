@@ -34,26 +34,33 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        //땅 감지
-        isGround = Physics2D.OverlapBox(transform.position, boxSize, 0, LayerMask.GetMask("Ground"));
 
-        //벽 감지
-        wall = Physics2D.OverlapBox(transform.position, parkourBoxSize, 0, LayerMask.GetMask("Ground"));
-
-        //움직이는 벽 감지
-        moveWall = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 0.35f), new Vector2(0.9f, 0.3f), 0, LayerMask.GetMask("MoveGround"));
-
-        Parkour();
-        MoveGround();
-        Die();
-        Clear();
-
-        if(isWall == false)
+        if(StageLoader.isLoading == false)
         {
 
-            Jump();
+            //땅 감지
+            isGround = Physics2D.OverlapBox(transform.position, boxSize, 0, LayerMask.GetMask("Ground"));
+
+            //벽 감지
+            wall = Physics2D.OverlapBox(transform.position, parkourBoxSize, 0, LayerMask.GetMask("Ground"));
+
+            //움직이는 벽 감지
+            moveWall = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 0.35f), new Vector2(0.9f, 0.3f), 0, LayerMask.GetMask("MoveGround"));
+
+            Parkour();
+            MoveGround();
+            Die();
+            Clear();
+
+            if(isWall == false)
+            {
+
+                Jump();
+
+            }
 
         }
+
 
     }
 
@@ -61,7 +68,12 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
 
-        Move();
+        if(StageLoader.isLoading == false)
+        {
+
+            Move();
+
+        }
         
     }
 
