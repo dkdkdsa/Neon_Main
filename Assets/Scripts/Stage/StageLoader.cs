@@ -8,7 +8,6 @@ using TMPro;
 public class StageLoader : MonoBehaviour
 {
     [SerializeField] private Image image;
-    [SerializeField] private Camera camera;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Ease ease;
     [SerializeField] private Vector2 moveDir;
@@ -26,13 +25,14 @@ public class StageLoader : MonoBehaviour
 
         isLoading = true;
         stage = GetComponentsInChildren<Stage>();
-        PlayerPrefs.GetInt("StageNum", stageNum);
+        stageNum = PlayerPrefs.GetInt("StageNum");
 
     }
 
     void Start()
     {
 
+        Debug.Log(stageNum);
         Sequence sequence = DOTween.Sequence()
         .Append(text.transform.DOMove(new Vector2(text.transform.position.x + moveDir.x, text.transform.position.y + moveDir.y), duration).SetEase(ease)
         .SetDelay(delayTime)
@@ -56,6 +56,8 @@ public class StageLoader : MonoBehaviour
 
     IEnumerator Loading()
     {
+
+        player.transform.position = stage[stageNum].startPos.position;
 
         for(int i = 0; i < 2; i++)
         {
@@ -83,8 +85,6 @@ public class StageLoader : MonoBehaviour
         }
 
         text.text = "Start";
-
-        camera.DOShakePosition(0.5f);
 
         yield return new WaitForSeconds(0.5f);
         Load();

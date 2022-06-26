@@ -273,7 +273,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 41714350}
-  camera: {fileID: 1649528266}
   text: {fileID: 1077860401}
   ease: 18
   moveDir: {x: 1350, y: 0}
@@ -5360,7 +5359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1e3ce20e5959448bf11e768bc42dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPos: {fileID: 1276561522}
+  startPos: {fileID: 789293392}
   stageNum: 0
 --- !u!1001 &2146235261
 PrefabInstance:

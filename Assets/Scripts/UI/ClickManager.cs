@@ -8,7 +8,10 @@ public class ClickManager : MonoBehaviour
 {
 
     [SerializeField] private UI_Move_DOTween[] loadObject;
-    [SerializeField] private int StageNum;
+    [SerializeField] private TextMeshProUGUI stegeText;
+    [SerializeField] private TextMeshProUGUI clearTimeText;
+    [SerializeField] private ClickManager startButton;
+    public int stageNum;
 
     public void ClickQultButton()
     {
@@ -63,8 +66,41 @@ public class ClickManager : MonoBehaviour
     public void StageButtonClick()
     {
 
+        StageButton stageButton = GetComponent<StageButton>();
+
+        clearTimeText.text = $"CLEAR TIME : {stageButton.clearTime}";
+        stegeText.text = $"STAGE{stageButton.stageNum}";
+        startButton.stageNum = stageButton.stageNum;
+
+        Debug.Log(stageNum);
+
         loadObject[0].Showing();
         loadObject[1].Disguise();
+
+    }
+
+    public void StageStartButtonClick()
+    {
+
+        StartCoroutine(GameStart());
+
+    }
+
+    IEnumerator GameStart()
+    {
+
+        for (int i = 0; i < loadObject.Length; i++)
+        {
+            
+            loadObject[i].Disguise();
+
+        }
+
+        yield return new WaitForSeconds(0.7f);
+
+        
+        PlayerPrefs.SetInt("StageNum", stageNum);
+        SceneManager.LoadScene("Stage");
 
     }
 

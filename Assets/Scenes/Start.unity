@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 16165533}
   - component: {fileID: 16165532}
   - component: {fileID: 16165535}
+  - component: {fileID: 16165536}
   m_Layer: 5
   m_Name: Stage_9
   m_TagString: Untagged
@@ -272,7 +273,24 @@ MonoBehaviour:
   loadObject:
   - {fileID: 1206655330}
   - {fileID: 1211172107}
-  StageNum: 0
+  stegeText: {fileID: 2068291834}
+  clearTimeText: {fileID: 163784198}
+  startButton: {fileID: 1152949688}
+  stageNum: 0
+--- !u!114 &16165536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16165530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c964cc447085204da4eb23c3530b158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearTime: 
+  stageNum: 9
 --- !u!1 &24670443
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +342,7 @@ GameObject:
   - component: {fileID: 63395123}
   - component: {fileID: 63395122}
   - component: {fileID: 63395125}
+  - component: {fileID: 63395126}
   m_Layer: 5
   m_Name: Stage_3
   m_TagString: Untagged
@@ -460,7 +479,24 @@ MonoBehaviour:
   loadObject:
   - {fileID: 1206655330}
   - {fileID: 1211172107}
-  StageNum: 0
+  stegeText: {fileID: 2068291834}
+  clearTimeText: {fileID: 163784198}
+  startButton: {fileID: 1152949688}
+  stageNum: 0
+--- !u!114 &63395126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63395120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c964cc447085204da4eb23c3530b158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearTime: 
+  stageNum: 3
 --- !u!1 &69427141
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +644,7 @@ GameObject:
   - component: {fileID: 78017125}
   - component: {fileID: 78017124}
   - component: {fileID: 78017127}
+  - component: {fileID: 78017128}
   m_Layer: 5
   m_Name: Stage_7
   m_TagString: Untagged
@@ -744,7 +781,24 @@ MonoBehaviour:
   loadObject:
   - {fileID: 1206655330}
   - {fileID: 1211172107}
-  StageNum: 0
+  stegeText: {fileID: 2068291834}
+  clearTimeText: {fileID: 163784198}
+  startButton: {fileID: 1152949688}
+  stageNum: 0
+--- !u!114 &78017128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78017122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c964cc447085204da4eb23c3530b158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearTime: 
+  stageNum: 7
 --- !u!1 &86279489
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,6 +1585,7 @@ GameObject:
   - component: {fileID: 213004722}
   - component: {fileID: 213004721}
   - component: {fileID: 213004724}
+  - component: {fileID: 213004725}
   m_Layer: 5
   m_Name: Stage_1
   m_TagString: Untagged
@@ -1667,7 +1722,24 @@ MonoBehaviour:
   loadObject:
   - {fileID: 1206655330}
   - {fileID: 1211172107}
-  StageNum: 0
+  stegeText: {fileID: 2068291834}
+  clearTimeText: {fileID: 163784198}
+  startButton: {fileID: 1152949688}
+  stageNum: 0
+--- !u!114 &213004725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213004719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c964cc447085204da4eb23c3530b158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearTime: 
+  stageNum: 1
 --- !u!1 &266181826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,7 +1930,10 @@ MonoBehaviour:
   loadObject:
   - {fileID: 1211172107}
   - {fileID: 1206655330}
-  StageNum: 0
+  stegeText: {fileID: 0}
+  clearTimeText: {fileID: 0}
+  startButton: {fileID: 0}
+  stageNum: 0
 --- !u!114 &275897953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2202,6 +2277,7 @@ GameObject:
   - component: {fileID: 356618998}
   - component: {fileID: 356618997}
   - component: {fileID: 356619000}
+  - component: {fileID: 356619001}
   m_Layer: 5
   m_Name: Stage_8
   m_TagString: Untagged
@@ -2338,7 +2414,24 @@ MonoBehaviour:
   loadObject:
   - {fileID: 1206655330}
   - {fileID: 1211172107}
-  StageNum: 0
+  stegeText: {fileID: 2068291834}
+  clearTimeText: {fileID: 163784198}
+  startButton: {fileID: 1152949688}
+  stageNum: 0
+--- !u!114 &356619001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356618995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c964cc447085204da4eb23c3530b158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearTime: 
+  stageNum: 8
 --- !u!1 &387890861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2850,7 +2943,10 @@ MonoBehaviour:
   - {fileID: 1211172107}
   - {fileID: 1428677697}
   - {fileID: 1871120586}
-  StageNum: 0
+  stegeText: {fileID: 0}
+  clearTimeText: {fileID: 0}
+  startButton: {fileID: 0}
+  stageNum: 0
 --- !u!1 &815102310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,6 +3094,7 @@ GameObject:
   - component: {fileID: 848956183}
   - component: {fileID: 848956182}
   - component: {fileID: 848956185}
+  - component: {fileID: 848956186}
   m_Layer: 5
   m_Name: Stage_4
   m_TagString: Untagged
@@ -3134,7 +3231,24 @@ MonoBehaviour:
   loadObject:
   - {fileID: 1206655330}
   - {fileID: 1211172107}
-  StageNum: 0
+  stegeText: {fileID: 2068291834}
+  clearTimeText: {fileID: 163784198}
+  startButton: {fileID: 1152949688}
+  stageNum: 0
+--- !u!114 &848956186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848956180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c964cc447085204da4eb23c3530b158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearTime: 
+  stageNum: 4
 --- !u!1 &868789422
 GameObject:
   m_ObjectHideFlags: 0
@@ -3395,8 +3509,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d310dbef57f15d4d83fdbeadc1dbb6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadObject: []
-  StageNum: 0
+  loadObject:
+  - {fileID: 1206655330}
+  stegeText: {fileID: 0}
+  clearTimeText: {fileID: 0}
+  startButton: {fileID: 0}
+  stageNum: 0
 --- !u!114 &1152949689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3443,7 +3561,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1152949688}
         m_TargetAssemblyTypeName: ClickManager, Assembly-CSharp
-        m_MethodName: BackButtonClick
+        m_MethodName: StageStartButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3452,7 +3570,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
 --- !u!114 &1152949690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4117,8 +4235,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d310dbef57f15d4d83fdbeadc1dbb6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadObject: []
-  StageNum: 0
+  loadObject:
+  - {fileID: 1428677697}
+  - {fileID: 1871120586}
+  stegeText: {fileID: 0}
+  clearTimeText: {fileID: 0}
+  startButton: {fileID: 0}
+  stageNum: 0
 --- !u!1 &1367516994
 GameObject:
   m_ObjectHideFlags: 0
@@ -4266,6 +4389,7 @@ GameObject:
   - component: {fileID: 1419439122}
   - component: {fileID: 1419439121}
   - component: {fileID: 1419439124}
+  - component: {fileID: 1419439125}
   m_Layer: 5
   m_Name: Stage_6
   m_TagString: Untagged
@@ -4402,7 +4526,24 @@ MonoBehaviour:
   loadObject:
   - {fileID: 1206655330}
   - {fileID: 1211172107}
-  StageNum: 0
+  stegeText: {fileID: 2068291834}
+  clearTimeText: {fileID: 163784198}
+  startButton: {fileID: 1152949688}
+  stageNum: 0
+--- !u!114 &1419439125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419439119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c964cc447085204da4eb23c3530b158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearTime: 
+  stageNum: 6
 --- !u!1 &1428677693
 GameObject:
   m_ObjectHideFlags: 0
@@ -4511,6 +4652,7 @@ GameObject:
   - component: {fileID: 1475516266}
   - component: {fileID: 1475516265}
   - component: {fileID: 1475516268}
+  - component: {fileID: 1475516269}
   m_Layer: 5
   m_Name: Stage_5
   m_TagString: Untagged
@@ -4647,7 +4789,24 @@ MonoBehaviour:
   loadObject:
   - {fileID: 1206655330}
   - {fileID: 1211172107}
-  StageNum: 0
+  stegeText: {fileID: 2068291834}
+  clearTimeText: {fileID: 163784198}
+  startButton: {fileID: 1152949688}
+  stageNum: 0
+--- !u!114 &1475516269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475516263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c964cc447085204da4eb23c3530b158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearTime: 
+  stageNum: 5
 --- !u!1 &1517258696
 GameObject:
   m_ObjectHideFlags: 0
@@ -4929,7 +5088,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadObject: []
-  StageNum: 0
+  stegeText: {fileID: 0}
+  clearTimeText: {fileID: 0}
+  startButton: {fileID: 0}
+  stageNum: 0
 --- !u!1 &1624196404
 GameObject:
   m_ObjectHideFlags: 0
@@ -5081,7 +5243,10 @@ MonoBehaviour:
   - {fileID: 1211172107}
   - {fileID: 1428677697}
   - {fileID: 1871120586}
-  StageNum: 0
+  stegeText: {fileID: 0}
+  clearTimeText: {fileID: 0}
+  startButton: {fileID: 0}
+  stageNum: 0
 --- !u!1 &1627205632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5266,6 +5431,7 @@ GameObject:
   - component: {fileID: 1734013624}
   - component: {fileID: 1734013623}
   - component: {fileID: 1734013626}
+  - component: {fileID: 1734013627}
   m_Layer: 5
   m_Name: Stage_2
   m_TagString: Untagged
@@ -5402,7 +5568,24 @@ MonoBehaviour:
   loadObject:
   - {fileID: 1206655330}
   - {fileID: 1211172107}
-  StageNum: 0
+  stegeText: {fileID: 2068291834}
+  clearTimeText: {fileID: 163784198}
+  startButton: {fileID: 1152949688}
+  stageNum: 0
+--- !u!114 &1734013627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734013621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c964cc447085204da4eb23c3530b158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearTime: 
+  stageNum: 2
 --- !u!1 &1738127370
 GameObject:
   m_ObjectHideFlags: 0
@@ -6262,6 +6445,7 @@ GameObject:
   - component: {fileID: 2116017712}
   - component: {fileID: 2116017711}
   - component: {fileID: 2116017714}
+  - component: {fileID: 2116017715}
   m_Layer: 5
   m_Name: Stage_10
   m_TagString: Untagged
@@ -6398,4 +6582,21 @@ MonoBehaviour:
   loadObject:
   - {fileID: 1206655330}
   - {fileID: 1211172107}
-  StageNum: 0
+  stegeText: {fileID: 2068291834}
+  clearTimeText: {fileID: 163784198}
+  startButton: {fileID: 1152949688}
+  stageNum: 0
+--- !u!114 &2116017715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116017709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c964cc447085204da4eb23c3530b158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearTime: 
+  stageNum: 10
