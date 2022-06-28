@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private Vector2 knockBackBoxSize;
+    [SerializeField] private GameObject dieEffect;
     [SerializeField] private float knockBackPower;
     [SerializeField] private float delayTime;
 
@@ -38,6 +39,7 @@ public class Enemy : MonoBehaviour
         if(Physics2D.OverlapBox(transform.position, new Vector2(1, 1), 0, LayerMask.GetMask("Trap")))
         {
 
+            Instantiate(dieEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
 
         }
@@ -82,6 +84,8 @@ public class Enemy : MonoBehaviour
         
         if(enemtHP <= 0)
         {
+
+            Instantiate(dieEffect, transform.position, Quaternion.identity);
 
             Destroy(gameObject);
 

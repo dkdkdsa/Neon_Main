@@ -14,6 +14,7 @@ public class StageLoader : MonoBehaviour
     [SerializeField] private float delayTime;
     [SerializeField] private float duration;
     [SerializeField] private GameObject player;
+    [SerializeField] private AudioSource playSound;
 
     private Stage[] stage;
     private int stageNum;
@@ -59,21 +60,22 @@ public class StageLoader : MonoBehaviour
 
         player.transform.position = stage[stageNum].startPos.position;
 
-        for(int i = 0; i < 2; i++)
+        for(int i = 0; i < 1; i++)
         {
 
             for(int j = 0; j < 3; j++)
             {
 
                 text.text += ".";
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(0.5f);
 
             }
             text.text = "Loading";
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
         }
 
         text.text = "Complete";
+        playSound.Play();
         yield return new WaitForSeconds(1);
 
         for(int i = 3; i > 0; i--)
@@ -93,7 +95,8 @@ public class StageLoader : MonoBehaviour
         {
 
             isLoading = false;
-
+            Timer.start = true;
+           
         });
 
     }

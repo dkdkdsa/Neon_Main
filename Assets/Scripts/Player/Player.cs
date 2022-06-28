@@ -11,9 +11,13 @@ public class Player : MonoBehaviour
     [SerializeField] private float wallJumpPower;
     [SerializeField] private float daleyTime;
     [SerializeField] private KeyCode jumpKeyCode;
+    [SerializeField] private Timer timer;
+    [SerializeField] private GameObject dieEffect;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Vector2 boxSize;
     [SerializeField] private Vector2 parkourBoxSize;
 
+    private bool load;
     private bool isWall;
     private bool isWallJumping;
     private string dir;
@@ -37,6 +41,17 @@ public class Player : MonoBehaviour
 
         if(StageLoader.isLoading == false)
         {
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+
+                #if UNITY_EDITOR
+                    UnityEditor.EditorApplication.isPlaying = false;
+                #endif
+
+                Application.Quit();
+
+            }
 
             //땅 감지
             isGround = Physics2D.OverlapBox(transform.position, boxSize, 0, LayerMask.GetMask("Ground"));
@@ -141,7 +156,14 @@ public class Player : MonoBehaviour
     private void Parkour()
     {
 
-        if(wall == true && isWall == false) playerRigidbody.velocity = Vector2.zero;
+        if (wall == true && isWall == false)
+        {
+
+            playerRigidbody.velocity = Vector2.zero;
+            isWallJumping = false;
+            StopCoroutine("delay");
+
+        }
 
         if(wall == true && isGround == false)
         {
@@ -159,14 +181,14 @@ public class Player : MonoBehaviour
                 if(wall.transform.position.x > transform.position.x)
                 {
                     playerRigidbody.AddForce(new Vector2(-0.5f, 1.7f) * wallJumpPower, ForceMode2D.Impulse);
-                    StartCoroutine(delay());
+                    StartCoroutine("delay");
 
 
                 }
                 else if(wall.transform.position.x < transform.position.x)
                 {
                     playerRigidbody.AddForce(new Vector2(0.5f, 1.7f) * wallJumpPower, ForceMode2D.Impulse);
-                    StartCoroutine(delay());
+                    StartCoroutine("delay");
 
                 }
 
@@ -194,9 +216,24 @@ public class Player : MonoBehaviour
     private void Die()
     {
 
-        if(Physics2D.OverlapBox(transform.position, new Vector2(1, 1), 0, LayerMask.GetMask("Trap")))
+        if(Physics2D.OverlapBox(transform.position, new Vector2(1, 1), 0, LayerMask.GetMask("Trap")) || Physics2D.OverlapBox(transform.position, new Vector2(1, 1), 0, LayerMask.GetMask("Enemy")))
         {
-            //나중에 죽는거 만들기
+
+            StageLoader.isLoading = true;
+
+            Instantiate(dieEffect, transform.position, Quaternion.identity);
+
+            spriteRenderer.enabled = false;
+
+            if (load == false)
+            {
+
+                timer.Die();
+
+                load = true;
+
+            }
+
             Debug.Log("Die");
 
         }
@@ -209,7 +246,17 @@ public class Player : MonoBehaviour
 
         if(Physics2D.OverlapBox(transform.position, new Vector2(1, 1), 0, LayerMask.GetMask("Clear")))
         {
-            //나중에 씬 넘어가는거 만들기
+            
+            if(load == false)
+            {
+
+                timer.TiemSet();
+
+
+                load = true;
+
+            }
+                
             Debug.Log("Clear");
 
         }
