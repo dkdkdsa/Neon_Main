@@ -15,6 +15,7 @@ public class StageLoader : MonoBehaviour
     [SerializeField] private float duration;
     [SerializeField] private GameObject player;
     [SerializeField] private AudioSource playSound;
+    [SerializeField] private GameObject particle;
 
     private Stage[] stage;
     private int stageNum;
@@ -59,6 +60,7 @@ public class StageLoader : MonoBehaviour
     {
 
         player.transform.position = stage[stageNum].startPos.position;
+        particle.transform.position = stage[stageNum].startPos.position;
 
         for(int i = 0; i < 1; i++)
         {

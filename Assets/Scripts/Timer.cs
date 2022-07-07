@@ -98,8 +98,6 @@ public class Timer : MonoBehaviour
         else
         {
 
-
-            //PlayerPrefs.SetFloat(i.ToString(), bestClearTime);
             PlayerPrefs.SetFloat("BestClearTime", bestClearTime);
             PlayerPrefs.SetFloat("ThisClearTime", time);
             PlayerPrefs.SetInt("isGameOver", 1);
